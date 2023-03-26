@@ -9,4 +9,4 @@
 - Create a random rgb to pass through the square randomizing background-color leaving trail of backgroundColor
 
 ### try it here
-Leave a Link here for user to try
+[Demo](https://firedragongod.github.io/Etch-a-Sketch/) 
