@@ -54,3 +54,12 @@ const divReset = function resetTheDivCreatingNew() {
       div.remove('div');
   });
 };
+
+clear.addEventListener('click', function removeDiv() {
+  const div = document.querySelectorAll('#square > div');
+
+  div.forEach((div) => {
+    div.style.backgroundColor = '';
+  });
+});
+
