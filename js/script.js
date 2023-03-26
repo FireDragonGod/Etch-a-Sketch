@@ -22,3 +22,12 @@ const divCreation = function createLotsOfDivInSquareContainer() {
 };
 
 divCreation();
+
+colorMode.addEventListener('click', () => {
+  const div = document.querySelectorAll('#square > div');
+  div.forEach((div) => {
+    div.addEventListener('mouseenter', e => {
+      e.target.style.backgroundColor = `${colorPicker.value}`;
+    });
+  });
+});
