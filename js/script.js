@@ -63,3 +63,16 @@ clear.addEventListener('click', function removeDiv() {
   });
 });
 
+const randomNumber = function getRandomNumber(maxNumber) {
+  return Math.floor(Math.random() * maxNumber);
+}
+
+randomColor.addEventListener('click', () => {
+  const div = document.querySelectorAll('#square > div');
+
+  div.forEach((div) => {
+    div.addEventListener('mouseenter', (e) => {
+      e.target.style.backgroundColor = `rgb(${randomNumber(256)}, ${randomNumber(256)}, ${randomNumber(256)})`;
+    });
+  });
+});
