@@ -31,3 +31,26 @@ colorMode.addEventListener('click', () => {
     });
   });
 });
+
+grid.addEventListener('click', function createLotsOfDivInSquareContainer() {
+  divReset();
+  let grid = Number(prompt('Type any number from 1 to 100'));
+  if (grid > 100 || grid < 0) {
+    grid = 16;
+  }
+  let i = 0;
+  for (; i < (grid * grid); i++) {
+    const divCreate = document.createElement('div');
+    square.style.cssText = `display: grid; grid-template-columns: repeat(${grid}, 1fr); grid-template-rows: repeat(${grid}, 1fr);`;
+    square.appendChild(divCreate);
+  }
+  gridSizeFromDom.textContent = `${grid} x ${grid}`;
+});
+
+const divReset = function resetTheDivCreatingNew() {
+  const div = document.querySelectorAll('#square > div');
+
+  div.forEach((div) => {
+      div.remove('div');
+  });
+};
